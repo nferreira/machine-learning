@@ -13439,6 +13439,7 @@ Make sure to keep track of the various features and conditions you tried before 
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h3><p><em>Describe the steps you took to implement the final prediction model so that it got an accuracy of at least 80%. What features did you look at? Were certain features more informative than others? Which conditions did you use to split the survival outcomes in the data? How accurate are your predictions?</em><br>
 <strong>Hint:</strong> Run the code cell below to see the accuracy of your predictions.</p>
+<p>In order to decide with feature to use to reach at least 80% of accuracy, I used the vs.survival_stats method, e.g. vs.survival_stats(data, outcomes, 'Pclass', ["Sex == 'male'", "Age &lt; 40"]) in order to evaluate the features that would better improve the accuracy. For instance, I noticed that when the passenger was a femela and the age was &gt;= 40 and &lt; 50 and the passenger was in the 3rd class, it was more likely to have not suvirved. Playing with different features, I managed to improve the accuracy of the predictions.</p>
 
 </div>
 </div>
